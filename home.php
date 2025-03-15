@@ -3,102 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organizer Registration Form</title>
+    <title>Client Registration form</title>
 </head>
 <body>
-    <h1>Organizer Registration</h1>
-    <form action="action.php" method="post">
-        <!-- 1. Basic Info -->
-        <fieldset>
-            <legend>Basic Information</legend>
-            <label for="fullName">Full Name:</label><br>
-            <input type="text" id="fullName" name="fullName" required><br><br>
-
-            <label for="email">Email Address:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="phone">Phone Number:</label><br>
-            <input type="tel" id="phone" name="phone" required><br><br>
-
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" required><br><br>
-
-            <!-- Added Date of Birth -->
-            <label for="dob">Date of Birth:</label><br>
-            <input type="date" id="dob" name="dob" required><br><br>
-
-            <!-- Added Gender -->
-            <label>Gender:</label><br>
-            <input type="radio" id="male" name="gender" value="male" required>
-            <label for="male">Male</label><br>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br>
-            <input type="radio" id="other" name="gender" value="other">
-            <label for="other">Other</label><br><br>
+    <h2><u>Client Registration</u></h2>
+    <form action="action.php" method="POST">
+      <fieldset>
+        <legend><u>Client Information</u></legend>
+        
+        <div>
+          <fieldset>
+          <legend>First name :</legend>
+          <input type="text" id="fname" name="fname"placeholder="write your First name" maxlength="15" required >
+          </fieldset>
+        </div>
+      
+        <br />
+        
+        <div><fieldset>
+          <legend>Last name : </legend>
+          <input type="text" id="lname" name="lname"  placeholder="write your Last name" maxlength="15"  required >
         </fieldset>
+        </div>
+ 
+        <br />
+        <div>
+          <label for="email">Email : </label>
+          <input type="email" id="email"name="email" placeholder="Please write your email here" required >
+        </div>
+        <br />
+        <div>
+            <label for="address">Address : </label>
+          <input type="address" id="address" name="address" placeholder="Please write your address here" required >
+        </div><br>
+        <div>
+            <label for="NID">NID Number :</label>
+            <input type="NID" id="NID" name="NID" placeholder="Enter your NID Number"  required >
+        </div><br>
+        <div>
+          <label for="username">Username : </label>
+          <input type="username" id="username" name="username" placeholder="write your username here" >
+        </div>
+        <br />
+        <div>
+          <label for="password">Password : </label>
+          <input type="password" id="password" name="password"placeholder="Enter your password" required >
+        </div>
+        <br />
+        <div>
+          <label for="password">Confirm password : </label>
+          <input type="password" id="password" name="password" placeholder="rewrite your password" required >
+        </div>
+        <br />
+        <div>
+          <label for="phone">Phone :</label>
+          <input type="phone" id="phone" name="phone" placeholder="Enter your phone num"  required >
 
-        <!-- 2. Professional Details -->
-        <fieldset>
-            <legend>Professional Details</legend>
-            <label for="orgName">Organization Name:</label><br>
-            <input type="text" id="orgName" name="orgName" required><br><br>
+        </div>
+        <br />
 
-            <!-- Added Organization Type -->
-            <label for="orgType">Organization Type:</label><br>
-            <select id="orgType" name="orgType" required>
-                <option value="">Select</option>
-                <option value="company">Company</option>
-                <option value="nonProfit">Non-Profit</option>
-                <option value="educational">Educational Institution</option>
-                <option value="government">Government</option>
-                <option value="other">Other</option>
-            </select><br><br>
+        <div>
+          <label for="birthdate">birthdate </label>
+          <input type="date" id="birthdate" name="birthdate" required />
+        </div>
+        <br />
+        <div>
+          <label>Gender:</label>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
 
-            <label for="jobTitle">Job Title/Role:</label><br>
-            <input type="text" id="jobTitle" name="jobTitle" required><br><br>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
 
-            <label for="orgWebsite">Organization Website (optional):</label><br>
-            <input type="url" id="orgWebsite" name="orgWebsite"><br><br>
+          <input
+            type="radio"
+            id="prefer-not-to-say"
+            name="gender"
+            value="prefer-not-to-say"
+          />
+          <label for="prefer-not-to-say">Prefer not to say</label>
+        </div>
+        <br />
+        <div>
+            <label>Do you require parking</label>
+            <input type="radio" id="Yes" name="parking" value="Yes" />
+            <label for="Yes">Yes</label>
+  
+            <input type="radio" id="No" name="parking" value="No" />
+            <label for="No">No</label>
+        </div><br>
+       
+
+
+              <div>
+                <label for="food">any dietary restrictions:</label>
+                <select id="food" name="food">
+                  <option value="None">None</option>
+                  <option value="Vegetarian">Vegetarian</option>
+                  <option value="Gluten allergy">Gluten allergy</option>
+                  <option value="Lactose intolerance
+                  ">Lactose intolerance
+                </option>
+                  <option value="shellfish allergy">shellfish allergy</option>
+                </select>
+              </div><br>
+              <div>
+                <fieldset>
+                    <legend>Payment & Billing</legend>
+                    <label for="paymentMethod">Preferred Payment Method:</label><br>
+                    <select id="paymentMethod" name="paymentMethod" required>
+                        <option value="bankTransfer">Bank Transfer</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="creditCard">Credit Card</option>
+                    </select><br><br>
+        
+                    <label for="bankDetails">Bank Account Details (if applicable):</label><br>
+                    <input type="text" id="bankDetails" name="bankDetails"><br><br>
+        
         </fieldset>
+              </div>
 
-        <!-- 3. Contact Info -->
-        <fieldset>
-            <legend>Contact Information</legend>
-            <label for="address">Address:</label><br>
-            <input type="text" id="address" name="address" required><br><br>
-            <label for="country">Country/Region:</label><br>
-            <input type="text" id="country" name="country" required><br><br>
-        </fieldset>
+       
+      
+        <div>
+            <label for="eventDetails">Any additional details about the event?</label>
+            <textarea id="eventDetails" name="eventDetails" rows="3" cols="50" placeholder="Enter any extra information..."></textarea>
+        </div><br><br><br>
 
-        <!-- 4. Payment & Billing -->
-        <fieldset>
-            <legend>Payment & Billing</legend>
-            <label for="paymentMethod">Preferred Payment Method:</label><br>
-            <select id="paymentMethod" name="paymentMethod" required>
-                <option value="bankTransfer">Bank Transfer</option>
-                <option value="paypal">PayPal</option>
-                <option value="creditCard">Credit Card</option>
-            </select><br><br>
 
-            <label for="bankDetails">Bank Account Details (if applicable):</label><br>
-            <input type="text" id="bankDetails" name="bankDetails"><br><br>
+            <div>
+                <input type="checkbox" id="terms" name="terms" required />
+          <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+              </div>
+        
 
-            <label for="taxID">Tax ID (if applicable):</label><br>
-            <input type="text" id="taxID" name="taxID"><br><br>
-        </fieldset>
-
-        <!-- 5. Agreements -->
-        <fieldset>
-            <legend>Agreements</legend>
-            <input type="checkbox" id="terms" name="terms" required>
-            <label for="terms">I agree to the Terms & Conditions</label><br><br>
-
-            <input type="checkbox" id="privacy" name="privacy" required>
-            <label for="privacy">I agree to the Privacy Policy</label><br><br>
-        </fieldset>
-
-        <!-- Submit Button -->
-        <input type="submit" value="Register">
+        <br />
+        <div><input type="reset" value="reset"></div>
+        <br />
+        <div><input type="submit" value="submit"  > </div> 
+      </fieldset>
     </form>
 </body>
 </html>
