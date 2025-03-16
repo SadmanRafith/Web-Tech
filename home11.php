@@ -14,81 +14,61 @@
                 <!-- First Name -->
                 <tr>
                     <td><label for="fname">First Name:</label></td>
-                    <td>
-                        <input type="text" id="fname" name="fname" placeholder="Write your First Name" maxlength="15" required>
-                    </td>
+                    <td><input type="text" id="fname" name="fname" placeholder="Write your First Name" maxlength="15" required></td>
                 </tr>
 
                 <!-- Last Name -->
                 <tr>
                     <td><label for="lname">Last Name:</label></td>
-                    <td>
-                        <input type="text" id="lname" name="lname" placeholder="Write your Last Name" maxlength="15" required>
-                    </td>
+                    <td><input type="text" id="lname" name="lname" placeholder="Write your Last Name" maxlength="15" required></td>
                 </tr>
 
                 <!-- Email -->
                 <tr>
                     <td><label for="email">Email:</label></td>
-                    <td>
-                        <input type="email" id="email" name="email" placeholder="Please write your email here" required>
-                    </td>
+                    <td><input type="email" id="email" name="email" placeholder="Please write your email here" required></td>
                 </tr>
 
                 <!-- Address -->
                 <tr>
                     <td><label for="address">Address:</label></td>
-                    <td>
-                        <input type="text" id="address" name="address" placeholder="Please write your address here" required>
-                    </td>
+                    <td><input type="text" id="address" name="address" placeholder="Please write your address here" required></td>
                 </tr>
 
                 <!-- NID Number -->
                 <tr>
                     <td><label for="NID">NID Number:</label></td>
-                    <td>
-                        <input type="text" id="NID" name="NID" placeholder="Enter your NID Number" required>
-                    </td>
+                    <td><input type="text" id="NID" name="NID" placeholder="Enter your NID Number" required></td>
                 </tr>
 
                 <!-- Username -->
                 <tr>
                     <td><label for="username">Username:</label></td>
-                    <td>
-                        <input type="text" id="username" name="username" placeholder="Write your username here">
-                    </td>
+                    <td><input type="text" id="username" name="username" placeholder="Write your username here"></td>
                 </tr>
 
                 <!-- Password -->
                 <tr>
                     <td><label for="password">Password:</label></td>
-                    <td>
-                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                    </td>
+                    <td><input type="password" id="password" name="password" placeholder="Enter your password" required></td>
                 </tr>
 
                 <!-- Confirm Password -->
                 <tr>
                     <td><label for="confirmPassword">Confirm Password:</label></td>
-                    <td>
-                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Rewrite your password" required>
-                    </td>
+                    <td><input type="password" id="confirmPassword" name="confirmPassword" placeholder="Rewrite your password" required></td>
                 </tr>
 
                 <!-- Phone -->
                 <tr>
                     <td><label for="phone">Phone:</label></td>
-                    <td>
-                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
-                    </td>
+                    <td><input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required></td>
                 </tr>
 
                 <!-- Birthdate -->
                 <tr>
                     <td><label for="birthdate">Birthdate:</label></td>
-                    <td>
-                        <input type="date" id="birthdate" name="birthdate" required>
-                    </td>
+                    <td> <input type="date" id="birthdate" name="birthdate" required></td>
                 </tr>
 
                 <!-- Gender -->
@@ -147,9 +127,7 @@
                                 </tr>
                                 <tr>
                                     <td><label for="bankDetails">Bank Account Details (if applicable):</label></td>
-                                    <td>
-                                        <input type="text" id="bankDetails" name="bankDetails">
-                                    </td>
+                                    <td> <input type="text" id="bankDetails" name="bankDetails"></td>
                                 </tr>
                             </table>
                         </fieldset>
@@ -159,9 +137,7 @@
                 <!-- Additional Event Details -->
                 <tr>
                     <td><label for="eventDetails">Any additional details about the event?</label></td>
-                    <td>
-                        <textarea id="eventDetails" name="eventDetails" rows="3" cols="50" placeholder="Enter any extra information..."></textarea>
-                    </td>
+                    <td><textarea id="eventDetails" name="eventDetails" rows="3" cols="50" placeholder="Enter any extra information..."></textarea></td>
                 </tr>
 
                 <!-- Terms and Conditions -->
