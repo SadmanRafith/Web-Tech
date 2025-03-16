@@ -3,142 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organizer Registration Form</title>
+    <title>Client Registration Form</title>
 </head>
 <body>
-    <h1>Organizer Registration</h1>
-    <form action="action.php" method="post">
-        <!-- 1. Basic Info -->
+    <h2><u>Client Registration</u></h2>
+    <form action="action.php" method="POST">
         <fieldset>
-            <legend>Basic Information</legend>
+            <legend><u>Client Information</u></legend>
             <table>
+                <!-- First Name -->
                 <tr>
-                    <td><label for="fullName">Full Name:</label></td>
-                    <td><input type="text" id="fullName" name="fullname" required></td>
+                    <td><label for="fname">First Name:</label></td>
+                    <td>
+                        <input type="text" id="fname" name="fname" placeholder="Write your First Name" maxlength="15" required>
+                    </td>
                 </tr>
+
+                <!-- Last Name -->
                 <tr>
-                    <td><label for="email">Email Address:</label></td>
-                    <td><input type="email" id="email" name="email" required></td>
+                    <td><label for="lname">Last Name:</label></td>
+                    <td>
+                        <input type="text" id="lname" name="lname" placeholder="Write your Last Name" maxlength="15" required>
+                    </td>
                 </tr>
+
+                <!-- Email -->
                 <tr>
-                    <td><label for="phone">Phone Number:</label></td>
-                    <td><input type="tel" id="phone" name="phone" required></td>
+                    <td><label for="email">Email:</label></td>
+                    <td>
+                        <input type="email" id="email" name="email" placeholder="Please write your email here" required>
+                    </td>
                 </tr>
+
+                <!-- Address -->
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td>
+                        <input type="text" id="address" name="address" placeholder="Please write your address here" required>
+                    </td>
+                </tr>
+
+                <!-- NID Number -->
+                <tr>
+                    <td><label for="NID">NID Number:</label></td>
+                    <td>
+                        <input type="text" id="NID" name="NID" placeholder="Enter your NID Number" required>
+                    </td>
+                </tr>
+
+                <!-- Username -->
+                <tr>
+                    <td><label for="username">Username:</label></td>
+                    <td>
+                        <input type="text" id="username" name="username" placeholder="Write your username here">
+                    </td>
+                </tr>
+
+                <!-- Password -->
                 <tr>
                     <td><label for="password">Password:</label></td>
-                    <td><input type="password" id="password" name="password" required></td>
+                    <td>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </td>
                 </tr>
+
+                <!-- Confirm Password -->
                 <tr>
-                    <td><label for="dob">Date of Birth:</label></td>
-                    <td><input type="date" id="dob" name="dob" required></td>
+                    <td><label for="confirmPassword">Confirm Password:</label></td>
+                    <td>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Rewrite your password" required>
+                    </td>
                 </tr>
+
+                <!-- Phone -->
+                <tr>
+                    <td><label for="phone">Phone:</label></td>
+                    <td>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </td>
+                </tr>
+
+                <!-- Birthdate -->
+                <tr>
+                    <td><label for="birthdate">Birthdate:</label></td>
+                    <td>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </td>
+                </tr>
+
+                <!-- Gender -->
                 <tr>
                     <td><label>Gender:</label></td>
                     <td>
-                        <input type="radio" id="male" name="gender" value="male" required>
-                        <label for="male">Male</label><br>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
                         <input type="radio" id="female" name="gender" value="female">
-                        <label for="female">Female</label><br>
-                        <input type="radio" id="other" name="gender" value="other">
-                        <label for="other">Other</label>
+                        <label for="female">Female</label>
+                        <input type="radio" id="prefer-not-to-say" name="gender" value="prefer-not-to-say">
+                        <label for="prefer-not-to-say">Prefer not to say</label>
                     </td>
                 </tr>
-            </table>
-        </fieldset>
 
-        <!-- 2. Professional Details -->
-        <fieldset>
-            <legend>Professional Details</legend>
-            <table>
+                <!-- Parking Requirement -->
                 <tr>
-                    <td><label for="orgName">Organization Name:</label></td>
-                    <td><input type="text" id="orgName" name="orgName" required></td>
-                </tr>
-                <tr>
-                    <td><label for="orgType">Organization Type:</label></td>
+                    <td><label>Do you require parking?</label></td>
                     <td>
-                        <select id="orgType" name="orgType" required>
-                            <option value="">Select</option>
-                            <option value="company">Company</option>
-                            <option value="nonProfit">Non-Profit</option>
-                            <option value="educational">Educational Institution</option>
-                            <option value="government">Government</option>
-                            <option value="other">Other</option>
+                        <input type="radio" id="Yes" name="parking" value="Yes">
+                        <label for="Yes">Yes</label>
+                        <input type="radio" id="No" name="parking" value="No">
+                        <label for="No">No</label>
+                    </td>
+                </tr>
+
+                <!-- Dietary Restrictions -->
+                <tr>
+                    <td><label for="food">Any dietary restrictions:</label></td>
+                    <td>
+                        <select id="food" name="food">
+                            <option value="None">None</option>
+                            <option value="Vegetarian">Vegetarian</option>
+                            <option value="Gluten allergy">Gluten allergy</option>
+                            <option value="Lactose intolerance">Lactose intolerance</option>
+                            <option value="shellfish allergy">Shellfish allergy</option>
                         </select>
                     </td>
                 </tr>
-                <tr>
-                    <td><label for="jobTitle">Job Title/Role:</label></td>
-                    <td><input type="text" id="jobTitle" name="jobTitle" required></td>
-                </tr>
-                <tr>
-                    <td><label for="orgWebsite">Organization Website (optional):</label></td>
-                    <td><input type="url" id="orgWebsite" name="orgWebsite"></td>
-                </tr>
-            </table>
-        </fieldset>
 
-        <!-- 3. Contact Info -->
-        <fieldset>
-            <legend>Contact Information</legend>
-            <table>
+                <!-- Payment & Billing -->
                 <tr>
-                    <td><label for="address">Address:</label></td>
-                    <td><input type="text" id="address" name="address" required></td>
-                </tr>
-                <tr>
-                    <td><label for="country">Country/Region:</label></td>
-                    <td><input type="text" id="country" name="country" required></td>
-                </tr>
-            </table>
-        </fieldset>
-
-        <!-- 4. Payment & Billing -->
-        <fieldset>
-            <legend>Payment & Billing</legend>
-            <table>
-                <tr>
-                    <td><label for="paymentMethod">Preferred Payment Method:</label></td>
-                    <td>
-                        <select id="paymentMethod" name="paymentMethod" required>
-                            <option value="bankTransfer">Bank Transfer</option>
-                            <option value="paypal">PayPal</option>
-                            <option value="creditCard">Credit Card</option>
-                        </select>
+                    <td colspan="2">
+                        <fieldset>
+                            <legend>Payment & Billing</legend>
+                            <table>
+                                <tr>
+                                    <td><label for="paymentMethod">Preferred Payment Method:</label></td>
+                                    <td>
+                                        <select id="paymentMethod" name="paymentMethod" required>
+                                            <option value="bankTransfer">Bank Transfer</option>
+                                            <option value="paypal">PayPal</option>
+                                            <option value="creditCard">Credit Card</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="bankDetails">Bank Account Details (if applicable):</label></td>
+                                    <td>
+                                        <input type="text" id="bankDetails" name="bankDetails">
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
                     </td>
                 </tr>
+
+                <!-- Additional Event Details -->
                 <tr>
-                    <td><label for="bankDetails">Bank Account Details (if applicable):</label></td>
-                    <td><input type="text" id="bankDetails" name="bankDetails"></td>
+                    <td><label for="eventDetails">Any additional details about the event?</label></td>
+                    <td>
+                        <textarea id="eventDetails" name="eventDetails" rows="3" cols="50" placeholder="Enter any extra information..."></textarea>
+                    </td>
                 </tr>
+
+                <!-- Terms and Conditions -->
                 <tr>
-                    <td><label for="taxID">Tax ID (if applicable):</label></td>
-                    <td><input type="text" id="taxID" name="taxID"></td>
+                    <td colspan="2">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+                    </td>
+                </tr>
+
+                <!-- Reset and Submit Buttons -->
+                <tr>
+                    <td><input type="reset" value="Reset"></td>
+                    <td><input type="submit" value="Submit"></td>
                 </tr>
             </table>
         </fieldset>
-
-        <!-- 5. Agreements -->
-        <fieldset>
-            <legend>Agreements</legend>
-            <table>
-                <tr>
-                    <td>
-                        <input type="checkbox" id="terms" name="terms" value="ok" required>
-                        <label for="terms">I agree to the Terms & Conditions</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="checkbox" id="privacy" name="privacy" value="ok" required>
-                        <label for="privacy">I agree to the Privacy Policy</label>
-                    </td>
-                </tr>
-            </table>
-        </fieldset>
-
-        <!-- Submit Button -->
-        <input type="submit" value="Register">
     </form>
 </body>
 </html>
