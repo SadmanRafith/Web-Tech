@@ -1,0 +1,220 @@
+:root {
+    --primary: #4CAF50;
+    --secondary: #2196F3;
+    --accent: #FF9800;
+    --light-bg: #f8f9fa;
+    --dark-text: #212529;
+    --section-blue: #e3f2fd;
+    --section-green: #e8f5e9;
+    --section-orange: #fff3e0;
+    --section-purple: #f3e5f5;
+}
+
+/* 1. Element selector */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    margin: 0;
+    padding: 20px;
+    color: var(--dark-text);
+}
+
+/* 2. ID selector */
+#fname, #lname, #email, #address, #NID, #username, #password, #confirmPassword, #phone {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    width: 250px;
+    transition: all 0.3s;
+}
+
+/* 3. Class selector */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--primary);
+}
+
+/* 4. Attribute selector */
+input[type="radio"], input[type="checkbox"] {
+    accent-color: var(--accent);
+    transform: scale(1.2);
+    margin-right: 8px;
+}
+
+/* 5. Descendant selector */
+fieldset table tr td {
+    padding: 10px;
+}
+
+/* Header Styles */
+h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+    border-bottom: 2px dashed var(--primary);
+    
+}
+
+/* Fieldset Styles */
+fieldset {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid rgba(0,0,0,0.1);
+}
+
+/* Colorful Sections */
+fieldset:nth-of-type(1) {
+    background-color: var(--section-green);
+    border-left: 5px solid var(--primary);
+}
+
+fieldset:nth-of-type(2) {
+    background-color: var(--section-blue);
+    border-left: 5px solid var(--secondary);
+}
+
+fieldset:nth-of-type(3) {
+    background-color: var(--section-orange);
+    border-left: 5px solid var(--accent);
+}
+
+legend {
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+fieldset:nth-of-type(1) legend {
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+fieldset:nth-of-type(2) legend {
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+}
+
+fieldset:nth-of-type(3) legend {
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+
+/* Form Elements */
+label {
+    font-weight: 500;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--secondary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
+}
+
+/* Overflow example */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    overflow: auto;
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Inline-block example */
+input[type="reset"], input[type="submit"] {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 15px 5px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+input[type="submit"] {
+    background-color: var(--primary);
+    color: white;
+}
+
+input[type="reset"] {
+    background-color: #6c757d;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+input[type="reset"]:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Select Styles */
+select {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    width: 270px;
+    background-color: white;
+}
+
+/* Link Styles */
+a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Payment Section */
+fieldset fieldset {
+    background-color: var(--section-purple) !important;
+    border-left: 5px solid #9c27b0 !important;
+}
+
+fieldset fieldset legend {
+    color: #9c27b0 !important;
+    border: 2px solid #9c27b0 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px;
+    }
+    
+    fieldset table tr td {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+    }
+    
+    #fname, #lname, #email, #address, #NID, #username, #password, #confirmPassword, #phone, select {
+        width: 100%;
+    }
+    
+    input[type="reset"], input[type="submit"] {
+        width: 100%;
+        margin: 8px 0;
+    }
+}
