@@ -12,7 +12,7 @@
         <h2>Client Registration</h2>
         <form action="action.php" method="POST">
             <!-- Personal Information Section -->
-            <fieldset>
+            <fieldset class="fieldset-green">
                 <legend>Client Information</legend>
                 <table>
                     <!-- First Name -->
@@ -72,13 +72,13 @@
                     <!-- Birthdate -->
                     <tr>
                         <td><label for="birthdate">Birthdate:</label></td>
-                        <td> <input type="date" id="birthdate" name="birthdate" required></td>
+                        <td><input type="date" id="birthdate" name="birthdate" required></td>
                     </tr>
                 </table>
             </fieldset>
 
             <!-- Preferences Section -->
-            <fieldset>
+            <fieldset class="fieldset-blue">
                 <legend>Preferences</legend>
                 <table>
                     <!-- Gender -->
@@ -122,13 +122,13 @@
             </fieldset>
 
             <!-- Payment & Additional Info Section -->
-            <fieldset>
+            <fieldset class="fieldset-orange">
                 <legend>Payment & Additional Information</legend>
                 <table>
                     <!-- Payment & Billing -->
                     <tr>
                         <td colspan="2">
-                            <fieldset>
+                            <fieldset class="fieldset-purple">
                                 <legend>Payment & Billing</legend>
                                 <table>
                                     <tr>
@@ -143,7 +143,7 @@
                                     </tr>
                                     <tr>
                                         <td><label for="bankDetails">Bank Account Details (if applicable):</label></td>
-                                        <td> <input type="text" id="bankDetails" name="bankDetails"></td>
+                                        <td><input type="text" id="bankDetails" name="bankDetails"></td>
                                     </tr>
                                 </table>
                             </fieldset>
