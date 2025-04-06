@@ -1,185 +1,137 @@
-/* 1. Element selector */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f8f9fa;
     margin: 0;
     padding: 20px;
     color: #212529;
 }
 
-/* 2. ID selector */
-#fname, #lname, #email, #address, #NID, #username, #password, #confirmPassword, #phone {
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 6px;
-    width: 250px;
-    transition: all 0.3s;
-}
-
-/* 3. Class selector */
 .form-container {
     max-width: 800px;
-    margin: 0 auto;
-    background-color: white;
+    margin: auto;
+    background: white;
     padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
     border-top: 5px solid #4CAF50;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 4. Attribute selector */
-input[type="radio"], input[type="checkbox"] {
-    accent-color: #FF9800;
-    transform: scale(1.2);
-    margin-right: 8px;
-}
-
-/* 5. Descendant selector */
-fieldset table tr td {
-    padding: 10px;
-}
-
-/* Header Styles */
 h2 {
-    color: #4CAF50;
     text-align: center;
-    margin-bottom: 25px;
-    font-size: 2rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    padding-bottom: 10px;
+    color: #4CAF50;
+    margin-bottom: 20px;
     border-bottom: 2px dashed #4CAF50;
+    padding-bottom: 10px;
 }
 
-/* Fieldset Styles */
 fieldset {
     margin: 20px 0;
     padding: 20px;
+    border: 1px solid #ccc;
     border-radius: 8px;
-    border: 2px solid rgba(0,0,0,0.1);
-}
-
-/* Colorful Sections */
-fieldset:nth-of-type(1) {
-    background-color: #e8f5e9;
-    border-left: 5px solid #4CAF50;
-}
-
-fieldset:nth-of-type(2) {
-    background-color: #e3f2fd;
-    border-left: 5px solid #2196F3;
-}
-
-fieldset:nth-of-type(3) {
-    background-color: #fff3e0;
-    border-left: 5px solid #FF9800;
 }
 
 legend {
     font-weight: bold;
-    padding: 5px 15px;
-    border-radius: 20px;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-fieldset:nth-of-type(1) legend {
-    color: #4CAF50;
+    padding: 5px 10px;
+    background: white;
+    border-radius: 15px;
     border: 2px solid #4CAF50;
 }
 
-fieldset:nth-of-type(2) legend {
+/* Colored Fieldsets using classes */
+.fieldset-green {
+    background-color: #e8f5e9;
+    border-left: 5px solid #4CAF50;
+}
+
+.fieldset-blue {
+    background-color: #e3f2fd;
+    border-left: 5px solid #2196F3;
+}
+
+.fieldset-orange {
+    background-color: #fff3e0;
+    border-left: 5px solid #FF9800;
+}
+
+.fieldset-purple {
+    background-color: #f3e5f5;
+    border-left: 5px solid #9c27b0;
+}
+
+.fieldset-green legend {
+    border-color: #4CAF50;
+    color: #4CAF50;
+}
+
+.fieldset-blue legend {
+    border-color: #2196F3;
     color: #2196F3;
-    border: 2px solid #2196F3;
 }
 
-fieldset:nth-of-type(3) legend {
+.fieldset-orange legend {
+    border-color: #FF9800;
     color: #FF9800;
-    border: 2px solid #FF9800;
 }
 
-/* Form Elements */
+.fieldset-purple legend {
+    border-color: #9c27b0;
+    color: #9c27b0;
+}
+
 label {
     font-weight: 500;
+}
+
+input, select, textarea {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    min-height: 80px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 8px;
 }
 
 input:focus, select:focus, textarea:focus {
     border-color: #2196F3;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
 }
 
-/* Overflow example */
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 6px;
-    overflow: auto;
-    resize: vertical;
-    min-height: 80px;
-}
-
-/* Inline-block example */
-input[type="reset"], input[type="submit"] {
-    display: inline-block;
-    padding: 12px 25px;
-    margin: 15px 5px;
+input[type="submit"], input[type="reset"] {
+    padding: 10px 20px;
     border: none;
     border-radius: 30px;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s;
+    margin: 10px 5px;
+    color: white;
 }
 
 input[type="submit"] {
     background-color: #4CAF50;
-    color: white;
 }
 
 input[type="reset"] {
     background-color: #6c757d;
-    color: white;
 }
 
-input[type="submit"]:hover {
-    background-color: #3e8e41;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-input[type="reset"]:hover {
-    background-color: #5a6268;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Select Styles */
-select {
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 6px;
-    width: 270px;
-    background-color: white;
-}
-
-/* Link Styles */
 a {
     color: #2196F3;
+    font-weight: bold;
     text-decoration: none;
-    font-weight: 600;
 }
 
 a:hover {
     text-decoration: underline;
-}
-
-/* Payment Section */
-fieldset fieldset {
-    background-color: #f3e5f5 !important;
-    border-left: 5px solid #9c27b0 !important;
-}
-
-fieldset fieldset legend {
-    color: #9c27b0 !important;
-    border: 2px solid #9c27b0 !important;
 }
