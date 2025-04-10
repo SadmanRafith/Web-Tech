@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organizer Registration Form</title>
-</head>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+   </head>
 <body>
-    <h1>Organizer Registration</h1>
+<h1 class="sticky-header">Organizer Registration</h1>
     <form action="action.php" method="post">
         <!-- 1. Basic Info -->
-        <fieldset>
+        <fieldset id="basicInfo">
             <legend>Basic Information</legend>
             <table>
                 <tr>
@@ -47,7 +52,7 @@
         </fieldset>
 
         <!-- 2. Professional Details -->
-        <fieldset>
+        <fieldset id="professionalDetails">
             <legend>Professional Details</legend>
             <table>
                 <tr>
@@ -79,7 +84,7 @@
         </fieldset>
 
         <!-- 3. Contact Info -->
-        <fieldset>
+        <fieldset id="contactInfo">
             <legend>Contact Information</legend>
             <table>
                 <tr>
@@ -94,7 +99,7 @@
         </fieldset>
 
         <!-- 4. Payment & Billing -->
-        <fieldset>
+        <fieldset id="paymentBilling">
             <legend>Payment & Billing</legend>
             <table>
                 <tr>
@@ -119,7 +124,7 @@
         </fieldset>
 
         <!-- 5. Agreements -->
-        <fieldset>
+        <fieldset id="agreements">
             <legend>Agreements</legend>
             <table>
                 <tr>
@@ -136,9 +141,9 @@
                 </tr>
             </table>
         </fieldset>
-
+            <br>
         <!-- Submit Button -->
         <input type="submit" value="Register">
     </form>
 </body>
-</html>
+</html> 
